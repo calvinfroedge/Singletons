@@ -9,11 +9,11 @@ class Singleton
 		static int val_;
 		static Singleton* instance() {
 			if( val_ == 0 ) {
-				lock_mutex();
+				//lock_mutex();
 				if(p_instance == 0)
 					new Singleton;
-				unlock_mutex();
-				MEMORY_BARRIER();
+				//unlock_mutex();
+				//MEMORY_BARRIER();
 				val_ = 1;
 				return p_instance;
 			}
